@@ -17,13 +17,13 @@
     </dependency>
 
     <dependency>
-        <groupId>mysql</groupId>
-        <artifactId>mysql-connector-java</artifactId>
-        <version>8.0.32</version>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.32</version>
     </dependency>
 
   </dependencies>
-<build>
+  <build>
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -37,7 +37,21 @@
                 </archive>
             </configuration>
         </plugin>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>3.2.4</version>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>shade</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
     </plugins>
-</build>
+  </build>
 
 </project>

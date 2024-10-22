@@ -11,12 +11,12 @@ import java.sql.SQLException;
 public class App {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        studentDAO studentDAO = new studentDAO();
+        studentDAO studentDao = new studentDAO();
 
         Date birthDate = new GregorianCalendar(1990, Calendar.JANUARY, 1).getTime();
         Student student = new Student("John", "johndoe@gmail.com", birthDate);
 
-        studentDAO.insertStudent(student);
-        studentDAO.printStudents();
+        studentDao.insertStudent(student);
+        studentDao.printStudents();
     }
 }

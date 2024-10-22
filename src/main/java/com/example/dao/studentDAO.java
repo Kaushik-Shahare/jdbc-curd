@@ -14,11 +14,11 @@ public class studentDAO {
     private static final String username = "root";
     private static final String password = "";
 
-    private static final String INSERT_STUDENT_SQL = "INSERT INTO Student (name, email, dob) VALUES (?, ?, ?)";
-    private static final String SELECT_ALL_STUDENTS = "SELECT * FROM Student";
-    private static final String UPDATE_STUDENT_SQL = "UPDATE Student SET name = ?, email = ?, dob = ? WHERE id = ?";
-    private static final String DELETE_STUDENT_SQL = "DELETE FROM Student WHERE id = ?";
-    private static final String SELECT_STUDENT_BY_ID = "SELECT id, name, email, dob FROM Student WHERE id = ?";
+    private static final String INSERT_STUDENT_SQL = "INSERT INTO studentManagement (name, email, dob) VALUES (?, ?, ?)";
+    private static final String SELECT_ALL_STUDENTS = "SELECT * FROM studentManagement";
+    private static final String UPDATE_STUDENT_SQL = "UPDATE studentManagement SET name = ?, email = ?, dob = ? WHERE id = ?";
+    private static final String DELETE_STUDENT_SQL = "DELETE FROM studentManagement WHERE id = ?";
+    private static final String SELECT_STUDENT_BY_ID = "SELECT id, name, email, dob FROM studentManagement WHERE id = ?";
 
     protected Connection getConnection() {
         Connection connection = null;
